@@ -12,7 +12,7 @@ inquirer
       .replace("{title}", process.env.title)
       .replace("{header}", process.env.title)
       .replace("{description}", process.env.description)
-      .replace("{favicon}", process.env.favicon)
+      .replace("{favicon}", process.env.favicon_location)
       .replace("{logo}", process.env.logo);
     fs.writeFileSync("src/index.html", indexHTML);
 
