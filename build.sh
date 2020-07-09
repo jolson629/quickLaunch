@@ -10,8 +10,7 @@ export MONGODB_NAME=annotations
 export RUN_MODE=development
 export VERSION=0.9.0
 
-#docker build --no-cache \
-docker build \
+docker build --no-cache \
 	--build-arg title=$TITLE \
 	--build-arg description=$DESCRIPTION \
 	--build-arg favicon_location=$FAVICON_LOCATION \

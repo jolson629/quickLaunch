@@ -29,8 +29,8 @@ WORKDIR /mapbox/
 RUN git clone https://github.com/jolson629/quickLaunch.git
 WORKDIR /mapbox/quickLaunch/
 
-RUN npm ci
-RUN npm run config
+RUN npm ci --loglevel verbose
+RUN npm run config --loglevel verbose
 #npm install -g npm
 #npm update
 #npm audit fix

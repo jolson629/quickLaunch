@@ -19,17 +19,17 @@ inquirer
     // index.js file
     let originalJS = fs.readFileSync("./template/template.js", "utf8");
     const indexJS = originalJS
-      .replace("{url}", process.env.url)
-      .replace("{accessToken}", process.env.token);
+      .replace("{url}", process.env.mapbox_api_url)
+      .replace("{accessToken}", process.env.mapbox_token);
     fs.writeFileSync("src/index.js", indexJS);
 
     // app.js file
     let originalAppJS = fs.readFileSync("./template/template_app.js", "utf8");
     const appJS = originalAppJS
-      .replace("{db_url}", process.env.db_url)
-      .replace("{db_name}", process.env.db_name)
+      .replace("{db_url}", process.env.mongodb_url)
+      .replace("{db_name}", process.env.mongodb_name)
 
-    if (process.env.db_url === 'localhost') {
+    if (process.env.mongodb_url === 'localhost') {
       console.log("Starting Mongo in Docker")
       exec('docker run -d -p 27017:27017 mongo')
     }
